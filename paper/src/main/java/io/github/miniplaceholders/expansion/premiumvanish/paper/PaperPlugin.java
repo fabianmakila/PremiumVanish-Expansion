@@ -19,6 +19,8 @@ public final class PaperPlugin extends JavaPlugin {
 				.audiencePlaceholder("vanishsuffix", new VanishSuffixPlaceholder())
 				.globalPlaceholder("vanishedplayers", new VanishedPlayersPlaceholder())
 				.audiencePlaceholder("playercount", new PlayerCountPlaceholder())
+				.audiencePlaceholder("uselevel", new UseLevelPlaceholder())
+				.audiencePlaceholder("seelevel", new UseLevelPlaceholder())
 				.build()
 				.register();
 	}
