@@ -3,21 +3,13 @@ plugins {
     alias(libs.plugins.shadow)
 }
 
-dependencies {
-    implementation(projects.exampleExpansionVelocity)
-    implementation(projects.exampleExpansionPaper)
-    implementation(projects.exampleExpansionSponge)
-}
+group = "io.github.miniplaceholders"
+description = "MiniPlaceholders PremiumVanish Expansion"
+version = "1.0.0-SNAPSHOT"
 
-subprojects {
-    apply<JavaPlugin>()
-    java.toolchain.languageVersion.set(JavaLanguageVersion.of(17))
-    tasks {
-        compileJava {
-            options.encoding = Charsets.UTF_8.name()
-            options.release.set(17)
-        }
-    }
+dependencies {
+    implementation(projects.premiumvanishExpansionVelocity)
+    implementation(projects.premiumvanishExpansionPaper)
 }
 
 tasks {

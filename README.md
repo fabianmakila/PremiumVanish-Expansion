@@ -1,2 +1,2 @@
-# Example-Expansion
-Example Expansion for MiniPlaceholders
+# PremiumVanish-Expansion
+PremiumVanish Expansion for MiniPlaceholders

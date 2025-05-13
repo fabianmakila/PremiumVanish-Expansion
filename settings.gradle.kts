@@ -1,31 +1,24 @@
 @file:Suppress("UnstableApiUsage")
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
-rootProject.name = "MiniPlaceholders-Example-Expansion"
+rootProject.name = "MiniPlaceholders-PremiumVanish-Expansion"
 
 pluginManagement {
     repositories {
         gradlePluginPortal()
-        maven("https://maven.fabricmc.net/")
     }
 }
 
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        maven("https://papermc.io/repo/repository/maven-public/")
+        maven("https://repo.papermc.io/repository/maven-public/")
+        maven("https://jitpack.io")
     }
 }
 
-plugins {
-    id("org.gradle.toolchains.foojay-resolver-convention") version "0.7.0"
-    id("fabric-loom") version "1.4.5"
-    id("org.spongepowered.gradle.plugin") version "2.2.0"
-}
-
-arrayOf("common", "paper", "velocity", "sponge", "fabric").forEach {
-    include("example-expansion-$it")
-
-    project(":example-expansion-$it").projectDir = file(it)
+arrayOf("paper", "velocity").forEach {
+    include("premiumvanish-expansion-$it")
+    project(":premiumvanish-expansion-$it").projectDir = file(it)
 }
 

@@ -1,21 +1,19 @@
 plugins {
-    alias(libs.plugins.idea.ext)
-    alias(libs.plugins.blossom)
+    id("premiumvanish-expansion.java-conventions")
+    alias(libs.plugins.resourcefactory.velocity)
 }
 
 dependencies {
     compileOnly(libs.velocity.api)
-    annotationProcessor(libs.velocity.api)
     compileOnly(libs.miniplaceholders)
-    implementation(projects.exampleExpansionCommon)
+    compileOnly(libs.premiumvanish)
 }
 
-sourceSets {
-    main {
-        blossom {
-            javaSources {
-                property("version", project.version.toString())
-            }
-        }
+velocityPluginJson {
+    main = "io.github.miniplaceholders.expansion.premiumvanish.velocity.VelocityPlugin"
+    id = "miniplaceholders-premiumvanish-expansion"
+    dependencies {
+        dependency("miniplaceholders", optional = false)
+        dependency("premiumvanish", optional = false)
     }
 }
