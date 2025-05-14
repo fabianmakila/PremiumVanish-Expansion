@@ -13,6 +13,7 @@ dependencies {
 
 paperPluginYaml {
     main = "io.github.miniplaceholders.expansion.premiumvanish.paper.PaperPlugin"
+    name = "MiniPlaceholders-${rootProject.name}"
     author = "FabianAdrian"
     apiVersion = "1.21"
     dependencies {
