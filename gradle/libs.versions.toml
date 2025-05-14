@@ -2,19 +2,17 @@
 runtask = "2.3.1"
 resourcefactory = "1.2.1"
 
-miniplaceholders = "2.3.0"
-
 [libraries]
 
 velocity-api = { module = "com.velocitypowered:velocity-api", version = "3.4.0-SNAPSHOT" }
 paper-api = { module = "io.papermc.paper:paper-api", version = "1.21-R0.1-SNAPSHOT" }
 
-miniplaceholders = { module = "io.github.miniplaceholders:miniplaceholders-api", version.ref = "miniplaceholders" }
+miniplaceholders = { module = "io.github.miniplaceholders:miniplaceholders-api", version = "2.3.0" }
 premiumvanish = { module = "com.github.LeonMangler:PremiumVanishAPI", version = "2.9.18-2" }
 
 [plugins]
 
-shadow = { id = "com.github.johnrengelman.shadow", version = "8.1.1" }
+shadow = { id = "com.gradleup.shadow", version = "8.3.6" }
 runvelocity = { id = "xyz.jpenilla.run-velocity", version.ref = "runtask" }
 runpaper = { id = "xyz.jpenilla.run-velocity", version.ref = "runtask" }
 resourcefactory-paper = { id = "xyz.jpenilla.resource-factory-paper-convention", version.ref = "resourcefactory"}
