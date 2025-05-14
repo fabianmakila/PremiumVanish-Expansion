@@ -9,11 +9,10 @@ import net.kyori.adventure.text.minimessage.tag.resolver.ArgumentQueue;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 public final class PlayerCountPlaceholder implements AudiencePlaceholder {
 	@Override
-	public @Nullable Tag tag(@NotNull Audience audience, @NotNull ArgumentQueue queue, @NotNull Context ctx) {
+	public @NotNull Tag tag(@NotNull Audience audience, @NotNull ArgumentQueue queue, @NotNull Context ctx) {
 		Player player = (Player) audience;
 		int playerCount = 0;
 		for (Player onlinePlayer : Bukkit.getOnlinePlayers()) {
