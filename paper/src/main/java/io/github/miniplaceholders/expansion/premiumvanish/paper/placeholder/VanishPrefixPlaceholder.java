@@ -18,6 +18,6 @@ public final class VanishPrefixPlaceholder implements AudiencePlaceholder {
 	@Override
 	public @NotNull Tag tag(@NotNull Audience audience, @NotNull ArgumentQueue queue, @NotNull Context ctx) {
 		boolean invisible = VanishAPI.isInvisible((Player) audience);
-		return invisible ? TAG_EMPTY : TAG_PREFIX;
+		return invisible ? TAG_PREFIX : TAG_EMPTY;
 	}
 }

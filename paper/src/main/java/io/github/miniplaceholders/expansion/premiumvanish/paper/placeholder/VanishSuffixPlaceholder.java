@@ -19,6 +19,6 @@ public final class VanishSuffixPlaceholder implements AudiencePlaceholder {
 	@Override
 	public @NotNull Tag tag(@NotNull Audience audience, @NotNull ArgumentQueue queue, @NotNull Context ctx) {
 		boolean invisible = VanishAPI.isInvisible((Player) audience);
-		return invisible ? TAG_EMPTY : TAG_SUFFIX;
+		return invisible ? TAG_SUFFIX : TAG_EMPTY;
 	}
 }
