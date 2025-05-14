@@ -12,16 +12,16 @@ dependencies {
 }
 
 paperPluginYaml {
-    main = "io.github.miniplaceholders.premiumvanish.paper.PaperPlugin"
+    main = "io.github.miniplaceholders.expansion.premiumvanish.paper.PaperPlugin"
     author = "FabianAdrian"
     apiVersion = "1.21"
     dependencies {
         server {
-            register("miniplaceholders") {
+            register("MiniPlaceholders") {
                 required = true
                 load = PaperPluginYaml.Load.BEFORE
             }
-            register("premiumvanish") {
+            register("PremiumVanish") {
                 required = true
                 load = PaperPluginYaml.Load.BEFORE
             }
