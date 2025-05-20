@@ -16,12 +16,12 @@ PremiumVanish Expansion for MiniPlaceholders
     <tr>
         <td><code>&lt;premiumvanish_vanishprefix&gt;</code></td>
         <td>Audience</td>
-        <td>When a player is vanished returns green <code>[V] </code></td>
+        <td>When a player is vanished returns the prefix defined in <code>messages.yml</code></td>
     </tr>
     <tr>
         <td><code>&lt;premiumvanish_vanishsuffix&gt;</code></td>
         <td>Audience</td>
-        <td>When a player is vanished returns green <code> [V]</code></td>
+        <td>When a player is vanished returns the suffix defined in <code>messages.yml</code></td>
     </tr>
     <tr>
         <td><code>&lt;premiumvanish_vanishedplayers&gt;</code></td>
