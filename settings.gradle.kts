@@ -2,7 +2,7 @@
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
-rootProject.name = "PremiumVanish-Expansion"
+rootProject.name = "MiniPlaceholders-PremiumVanish-Expansion"
 
 pluginManagement {
 	repositories {

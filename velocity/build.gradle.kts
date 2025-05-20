@@ -11,8 +11,8 @@ dependencies {
 
 velocityPluginJson {
     main = "io.github.miniplaceholders.expansion.premiumvanish.velocity.VelocityPlugin"
-    name = "MiniPlaceholders-${rootProject.name}"
-    id = "miniplaceholders-premiumvanish-expansion"
+    name = rootProject.name
+    id = rootProject.name.lowercase()
     dependencies {
         dependency("miniplaceholders", optional = false)
         dependency("premiumvanish", optional = false)
