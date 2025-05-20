@@ -20,20 +20,10 @@ public final class VanishPrefixPlaceholder implements AudiencePlaceholder {
 		if (!invisible) {
 			return TAG_EMPTY;
 		}
-		Component prefix = prefix();
+		Component prefix = PaperPlugin.message("Messages.PlaceholderVanishPrefix");
 		if (prefix == null) {
 			return TAG_EMPTY;
 		}
 		return Tag.selfClosingInserting(prefix);
-	}
-
-	private Component prefix() {
-		String legacyString = VanishAPI.getMessages().getString("Messages.PlaceholderVanishPrefix");
-		if (legacyString == null) {
-			return null;
-		}
-
-		legacyString = legacyString.replace("#", "&#");
-		return PaperPlugin.SERIALIZER_LEGACY.deserialize(legacyString);
 	}
 }

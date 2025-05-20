@@ -2,6 +2,9 @@
 PremiumVanish Expansion for MiniPlaceholders
 
 ## Paper placeholders
+
+The expansion uses messages defined in the `plugins/PremiumVanish/messages.yml` file which can be changed from there.
+
 <table>
     <tr>
         <th>Placeholder</th>
@@ -11,17 +14,17 @@ PremiumVanish Expansion for MiniPlaceholders
     <tr>
         <td><code>&lt;premiumvanish_isvanished&gt;</code></td>
         <td>Audience</td>
-        <td>Returns <code>Yes</code> if player is vanished otherwise <code>No</code>.</td>
+        <td>Returns either <code>Messages.PlaceholderIsVanishedYes</code> or <code>Messages.PlaceholderIsVanishedNo</code></td>
     </tr>
     <tr>
         <td><code>&lt;premiumvanish_vanishprefix&gt;</code></td>
         <td>Audience</td>
-        <td>When a player is vanished returns the prefix defined in <code>messages.yml</code></td>
+        <td>When a player is vanished returns <code>Messages.PlaceholderVanishPrefix</code></td>
     </tr>
     <tr>
         <td><code>&lt;premiumvanish_vanishsuffix&gt;</code></td>
         <td>Audience</td>
-        <td>When a player is vanished returns the suffix defined in <code>messages.yml</code></td>
+        <td>When a player is vanished returns <code>Messages.PlaceholderVanishSuffix</code></td>
     </tr>
     <tr>
         <td><code>&lt;premiumvanish_vanishedplayers&gt;</code></td>
