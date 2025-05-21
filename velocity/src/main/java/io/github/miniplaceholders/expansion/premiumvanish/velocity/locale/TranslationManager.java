@@ -45,7 +45,7 @@ public final class TranslationManager {
 
 	private void createLocaleDirectory() {
 		try {
-			Files.createDirectory(this.localeDirectoryPath);
+			Files.createDirectories(this.localeDirectoryPath);
 		} catch (IOException e) {
 			this.logger.error("Couldn't create locale directory", e);
 		}
@@ -69,13 +69,13 @@ public final class TranslationManager {
 
 		try (DirectoryStream<Path> stream = Files.newDirectoryStream(this.localeDirectoryPath, "*.properties")) {
 			for (Path localeFilePath : stream) {
-				Path fileNamePath = localeFilePath.getFileName();
-				if (!fileNamePath.startsWith("messages_")) {
-					this.logger.warn("Couldn't load {}. Locale files must follow specified naming convention", fileNamePath);
+				String fileName = localeFilePath.getFileName().toString();
+				if (!fileName.startsWith("messages_")) {
+					this.logger.warn("Couldn't load {}. Locale files must follow specified naming convention", fileName);
 					continue;
 				}
 
-				Locale locale = parseLocaleFromFileName(localeFilePath);
+				Locale locale = parseLocaleFromFileName(fileName);
 				loadedLocaleNamesJoiner.add(locale.getLanguage());
 
 				ResourceBundle bundle;
@@ -94,8 +94,7 @@ public final class TranslationManager {
 		}
 	}
 
-	private Locale parseLocaleFromFileName(Path localeFilePath) {
-		String fileName = localeFilePath.getFileName().toString();
+	private Locale parseLocaleFromFileName(String fileName) {
 		String localeString = fileName.substring(
 				"messages_".length(),
 				fileName.length() - ".properties".length()
