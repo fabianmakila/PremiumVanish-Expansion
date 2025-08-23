@@ -1,7 +1,14 @@
 # PremiumVanish-Expansion
-PremiumVanish Expansion for MiniPlaceholders
+PremiumVanish Expansion for [MiniPlaceholders](https://github.com/MiniPlaceholders/MiniPlaceholders)
 
 ## Paper
+
+### Installation
+
+- Place the downloaded `MiniPlaceholders-PremiumVanish-Expansion-x.x.x.jar` into the `/plugins` directory
+- Start / restart the server
+
+### Placeholders
 
 The expansion uses messages defined in the `plugins/PremiumVanish/messages.yml` file which can be changed from there.
 
@@ -50,7 +57,13 @@ The expansion uses messages defined in the `plugins/PremiumVanish/messages.yml` 
 
 ## Velocity
 
-Messages can be changed by modifying the `messages_en.properties` file in `plugins/miniplaceholders-premiumvanish-expansion/locale` directory.
+### Installation
+- Place the downloaded `MiniPlaceholders-PremiumVanish-Expansion-x.x.x.jar` into the `/plugins` directory
+- Start / restart the proxy
+
+### Placeholders
+
+Placeholders can be changed by modifying the `messages_en.properties` file in `plugins/miniplaceholders-premiumvanish-expansion/locale` directory.
 For per-player locales, you can add more `.properties` files for other locales to the directory.
 
 <table>
