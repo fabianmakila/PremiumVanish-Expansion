@@ -18,7 +18,6 @@ import java.util.ResourceBundle;
 import java.util.StringJoiner;
 
 public final class TranslationManager {
-	public static final Locale DEFAULT_LOCALE = Locale.ENGLISH;
 	private final Logger logger;
 	private final Path localeDirectoryPath;
 	private MiniMessageTranslationStore store;
@@ -34,7 +33,6 @@ public final class TranslationManager {
 		}
 
 		this.store = MiniMessageTranslationStore.create(Key.key("miniplaceholders", "premiumvanish"));
-		this.store.defaultLocale(DEFAULT_LOCALE);
 
 		createLocaleDirectory();
 		copyDefaultBundleToLocaleDirectory();

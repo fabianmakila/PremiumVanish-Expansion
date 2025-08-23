@@ -33,14 +33,13 @@ public final class PaperPlugin extends JavaPlugin {
 		this.getSLF4JLogger().info("Starting PremiumVanish Expansion for Paper");
 
 		Expansion.builder("premiumvanish")
-				.filter(Player.class)
-				.audiencePlaceholder("isvanished", new IsVanishedPlaceholder())
-				.audiencePlaceholder("vanishprefix", new VanishPrefixPlaceholder())
-				.audiencePlaceholder("vanishsuffix", new VanishSuffixPlaceholder())
+				.audiencePlaceholder(Player.class, "isvanished", new IsVanishedPlaceholder())
+				.audiencePlaceholder(Player.class, "vanishprefix", new VanishPrefixPlaceholder())
+				.audiencePlaceholder(Player.class, "vanishsuffix", new VanishSuffixPlaceholder())
 				.globalPlaceholder("vanishedplayers", new VanishedPlayersPlaceholder())
-				.audiencePlaceholder("playercount", new PlayerCountPlaceholder())
-				.audiencePlaceholder("uselevel", new UseLevelPlaceholder())
-				.audiencePlaceholder("seelevel", new UseLevelPlaceholder())
+				.audiencePlaceholder(Player.class, "playercount", new PlayerCountPlaceholder())
+				.audiencePlaceholder(Player.class, "uselevel", new UseLevelPlaceholder())
+				.audiencePlaceholder(Player.class, "seelevel", new UseLevelPlaceholder())
 				.build()
 				.register();
 	}
