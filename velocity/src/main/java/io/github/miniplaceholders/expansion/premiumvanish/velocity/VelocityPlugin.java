@@ -34,14 +34,13 @@ public final class VelocityPlugin {
 		this.translationManager.load();
 
 		Expansion.builder("premiumvanish")
-				.filter(Player.class)
-				.audiencePlaceholder("isvanished", new IsVanishedPlaceholder())
-				.audiencePlaceholder("vanishprefix", new VanishPrefixPlaceholder())
-				.audiencePlaceholder("vanishsuffix", new VanishSuffixPlaceholder())
+				.audiencePlaceholder(Player.class, "isvanished", new IsVanishedPlaceholder())
+				.audiencePlaceholder(Player.class, "vanishprefix", new VanishPrefixPlaceholder())
+				.audiencePlaceholder(Player.class, "vanishsuffix", new VanishSuffixPlaceholder())
 				.globalPlaceholder("vanishedplayers", new VanishedPlayersPlaceholder(this.server))
-				.audiencePlaceholder("playercount", new PlayerCountPlaceholder(this.server))
-				.audiencePlaceholder("uselevel", new UseLevelPlaceholder())
-				.audiencePlaceholder("seelevel", new UseLevelPlaceholder())
+				.audiencePlaceholder(Player.class, "playercount", new PlayerCountPlaceholder(this.server))
+				.audiencePlaceholder(Player.class, "uselevel", new UseLevelPlaceholder())
+				.audiencePlaceholder(Player.class, "seelevel", new UseLevelPlaceholder())
 				.build()
 				.register();
 	}
