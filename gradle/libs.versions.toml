@@ -1,19 +1,19 @@
 [versions]
-runtask = "2.3.1"
-resourcefactory = "1.3.0"
+runtask = "3.0.2"
+resourcefactory = "1.3.1"
 
 [libraries]
 
-velocity-api = { module = "com.velocitypowered:velocity-api", version = "3.4.0-SNAPSHOT" }
-paper-api = { module = "io.papermc.paper:paper-api", version = "1.21.8-R0.1-SNAPSHOT" }
+velocity-api = { module = "com.velocitypowered:velocity-api", version = "3.5.0-SNAPSHOT" }
+paper-api = { module = "io.papermc.paper:paper-api", version = "26.1.2.build.+" }
 
-miniplaceholders = { module = "io.github.miniplaceholders:miniplaceholders-api", version = "3.0.1" }
+miniplaceholders = { module = "io.github.miniplaceholders:miniplaceholders-api", version = "3.2.0" }
 premiumvanish = { module = "com.github.LeonMangler:PremiumVanishAPI", version = "2.9.18-2" }
 
 [plugins]
 
-shadow = { id = "com.gradleup.shadow", version = "9.0.2" }
-runvelocity = { id = "xyz.jpenilla.run-velocity", version.ref = "runtask" }
-runpaper = { id = "xyz.jpenilla.run-velocity", version.ref = "runtask" }
+shadow = { id = "com.gradleup.shadow", version = "9.5.1" }
+run-velocity = { id = "xyz.jpenilla.run-velocity", version.ref = "runtask" }
+run-paper = { id = "xyz.jpenilla.run-velocity", version.ref = "runtask" }
 resourcefactory-paper = { id = "xyz.jpenilla.resource-factory-paper-convention", version.ref = "resourcefactory"}
 resourcefactory-velocity = { id = "xyz.jpenilla.resource-factory-velocity-convention", version.ref = "resourcefactory"}
